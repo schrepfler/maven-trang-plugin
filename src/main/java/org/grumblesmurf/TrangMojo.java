@@ -92,20 +92,20 @@ public class TrangMojo
         try {
             Driver d = new Driver();
 
-            Method doMain = Driver.class.getDeclaredMethod("doMain", String[].class);
-            doMain.setAccessible(true);
+            Method run = Driver.class.getDeclaredMethod("run", String[].class);
+            run.setAccessible(true);
 
-            Integer returnValue = (Integer)doMain.invoke(d, (Object)args);
+            Integer returnValue = (Integer)run.invoke(d, (Object)args);
             if (returnValue.intValue() != 0)
                 throw new MojoFailureException("Trang execution failed");
         } catch (SecurityException e) {
-            throw new MojoExecutionException("Failed to set accessibility of " + driverClassName + ".doMain()", e);
+            throw new MojoExecutionException("Failed to set accessibility of " + driverClassName + ".run()", e);
         } catch (InvocationTargetException e) {
-            throw new MojoExecutionException("Invocation of " + driverClassName + ".doMain() threw " + e.getMessage(), e);
+            throw new MojoExecutionException("Invocation of " + driverClassName + ".run() threw " + e.getMessage(), e);
         } catch (IllegalAccessException e) {
-            throw new MojoExecutionException("Could not access " + driverClassName + ".doMain()", e);
+            throw new MojoExecutionException("Could not access " + driverClassName + ".run()", e);
         } catch (NoSuchMethodException e) {
-            throw new MojoExecutionException("Class " + driverClassName + " has no method doMain(String[])");
+            throw new MojoExecutionException("Class " + driverClassName + " has no method run(String[])");
         }
     }
 }
