@@ -35,6 +35,7 @@
         <nexus.staging.maven.plugin.version>1.6.7</nexus.staging.maven.plugin.version>
         <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
         <license.maven.plugin.version>1.9</license.maven.plugin.version>
+        <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
     </properties>
 
     <scm>
@@ -153,6 +154,40 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <configuration>
+                    <tags>
+                        <tag>
+                            <name>goal</name>
+                            <placement>a</placement>
+                            <head>Goal:</head>
+                        </tag>
+                        <tag>
+                            <name>phase</name>
+                            <placement>a</placement>
+                            <head>Phase:</head>
+                        </tag>
+                        <tag>
+                            <name>threadSafe</name>
+                            <placement>a</placement>
+                            <head>Thread Safe:</head>
+                        </tag>
+                        <tag>
+                            <name>requiresDependencyResolution</name>
+                            <placement>a</placement>
+                            <head>Requires Dependency Resolution:</head>
+                        </tag>
+                        <tag>
+                            <name>requiresProject</name>
+                            <placement>a</placement>
+                            <head>Requires Project:</head>
+                        </tag>
+                    </tags>
                 </configuration>
             </plugin>
         </plugins>
