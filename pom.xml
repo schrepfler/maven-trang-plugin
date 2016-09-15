@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -161,7 +162,33 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven.javadoc.plugin.version}</version>
                 <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <tags>
+                        <tag>
+                            <name>goal</name>
+                            <placement>a</placement>
+                            <head>Goal:</head>
+                        </tag>
+                        <tag>
+                            <name>phase</name>
+                            <placement>a</placement>
+                            <head>Phase:</head>
+                        </tag>
+                        <tag>
+                            <name>threadSafe</name>
+                            <placement>a</placement>
+                            <head>Thread Safe:</head>
+                        </tag>
+                        <tag>
+                            <name>requiresDependencyResolution</name>
+                            <placement>a</placement>
+                            <head>Requires Dependency Resolution:</head>
+                        </tag>
+                        <tag>
+                            <name>requiresProject</name>
+                            <placement>a</placement>
+                            <head>Requires Project:</head>
+                        </tag>
+                    </tags>
                 </configuration>
             </plugin>
         </plugins>
