@@ -1,6 +1,8 @@
 trang-maven-plugin
 =
 
+[![Build Status](https://travis-ci.org/schrepfler/maven-trang-plugin.svg?branch=master)](https://travis-ci.org/schrepfler/maven-trang-plugin)
+
 This simple plugin invokes the Trang library on a set of xml schema input files to
     and produces a translated schema as output.  For more information about Trang, see
     http://www.thaiopensource.com/relaxng/trang.html.
