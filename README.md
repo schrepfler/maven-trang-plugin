@@ -1,7 +1,7 @@
 trang-maven-plugin
 =
 
-[![Build Status](https://travis-ci.org/schrepfler/maven-trang-plugin.svg?branch=master)](https://travis-ci.org/schrepfler/maven-trang-plugin)
+[![Build Status](https://travis-ci.org/schrepfler/trang-maven-plugin.svg?branch=master)](https://travis-ci.org/schrepfler/trang-maven-plugin)
 
 This simple plugin invokes the Trang library on a set of xml schema input files to
     and produces a translated schema as output.  For more information about Trang, see
@@ -20,7 +20,7 @@ You should specify the version in your project's plugin configuration:
     <plugins>
         <plugin>
           <groupId>net.sigmalab.trang</groupId>
-          <artifactId>maven-trang-plugin</artifactId>
+          <artifactId>trang-maven-plugin</artifactId>
           <version>1.2</version>
         </plugin>
       ...
@@ -42,7 +42,7 @@ This example will convert src/main/rnc/schema.rnc to XSD format and place the ou
     <plugins>
       <plugin>
         <groupId>net.sigmalab.trang</groupId>
-        <artifactId>maven-trang-plugin</artifactId>
+        <artifactId>trang-maven-plugin</artifactId>
         <version>1.2</version>
         <executions>
           <execution>
