@@ -11,7 +11,7 @@
     <groupId>net.sigmalab.trang</groupId>
     <artifactId>trang-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>Maven Trang Plugin</name>
 
     <description>
