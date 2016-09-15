@@ -37,6 +37,7 @@
         <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
         <license.maven.plugin.version>1.9</license.maven.plugin.version>
         <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
+        <github.global.server>github</github.global.server>
     </properties>
 
     <scm>
